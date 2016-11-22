@@ -6,12 +6,12 @@
 #    By: rojones <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/05/11 13:16:09 by rojones           #+#    #+#              #
-#    Updated: 2016/06/07 16:55:45 by rojones          ###   ########.fr        #
+#    Updated: 2016/11/22 09:09:31 by rojones          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = libft.a
 C = gcc
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Werror -Wextra -g3 -c
 OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o \
 	ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o \
 	ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcat.o ft_strncat.o \
@@ -26,7 +26,8 @@ OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o \
    	ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 	ft_isspace.o get_next_line.o ft_newword.o ft_wordlen.o ft_numwords.o\
 	ft_lstaddend.o ft_convert.o ft_modifiers.o ft_nummoders.o ft_pad.o\
-	ft_printf.o ft_printnumber.o ft_printstring.o ft_flags.o ft_printchar.o
+	ft_printf.o ft_printnumber.o ft_printstring.o ft_flags.o ft_printchar.o\
+	ft_atod.o
 
 $(NAME): all
 
@@ -103,6 +104,9 @@ ft_strncmp.o : ft_strncmp.c
 
 ft_atoi.o : ft_atoi.c
 	$(C) $(CFLAGS) ft_atoi.c
+
+ft_atod.o : ft_atod.c
+	$(C) $(CFLAGS) ft_atod.c
 
 ft_isalpha.o : ft_isalpha.c
 	$(C) $(CFLAGS) ft_isalpha.c

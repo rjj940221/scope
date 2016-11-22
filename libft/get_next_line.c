@@ -105,7 +105,7 @@ int				get_next_line(int const fd, char **line)
 
 	if (fd >= MAX_FD || fd < 0 || line == NULL)
 		return (-1);
-	if (stocks[fd] && stocks[fd]->read_ret == 0)
+	if (stocks[fd] && stocks[fd]->read_ret == 0 && stocks[fd]->lu < 0)
 		return (0);
 	if (!stocks[fd] && setup(&stocks[fd]))
 		return (-1);

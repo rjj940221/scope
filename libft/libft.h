@@ -165,5 +165,6 @@ void				ft_posmod(t_mod *mod, int *chrc, int c);
 void				ft_spacemod(t_mod *mod, int *chrc);
 void				ft_hashmod(t_mod *mod, int *chrc, int c);
 char				*ft_getnum(char *s, t_mod *mod);
+double				ft_atod(const char *nptr);
 
 #endif
