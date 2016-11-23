@@ -12,14 +12,28 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <libc.h>
+# include <unistd.h>
 # include <string.h>
-# define BUFF_SIZE 1
+# include <pthread.h>
+# include <string.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <wchar.h>
+# include <stdarg.h>
+# include <inttypes.h>
+# include <stdlib.h>
+# include <libc.h>
 # define L_LEN 50
 # define SPILL_MULT	2
-# define MAX_FD	1000
+# define BUFF_SIZE 32
 # define NUM_FILES 10
-# define MAX_BUFF 800000
+# define MAX_FILE_DESC 40
+
+typedef struct s_file
+{
+    char *sline;
+    int  read_re;
+}              t_file;
 
 typedef struct	s_list
 {
@@ -27,24 +41,6 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
-
-typedef struct	s_buff
-{
-	char			buff[BUFF_SIZE];
-	int				buf_pos;
-	int				buf_init;
-	int				eof;
-}				t_buff;
-
-typedef struct		s_stock
-{
-    char			*spill;
-    long			length;
-    long			lu;
-    int				read_ret;
-    char			*line_end;
-}					t_stock;
-
 
 typedef struct	s_mod
 {
@@ -127,7 +123,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstaddend(t_list **alst, t_list *new);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isspace(int c);
-int					get_next_line(const int fd, char **line);
 int					ft_newword(const char *s, unsigned int i, char del);
 int					ft_wordlen(const char *s, int start, char del);
 int					ft_numwords(char const *s, char c);
@@ -166,5 +161,6 @@ void				ft_spacemod(t_mod *mod, int *chrc);
 void				ft_hashmod(t_mod *mod, int *chrc, int c);
 char				*ft_getnum(char *s, t_mod *mod);
 double				ft_atod(const char *nptr);
+int                 get_next_line(const int fd, char **line);
 
 #endif

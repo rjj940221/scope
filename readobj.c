@@ -24,14 +24,8 @@ void count_components(char *file, t_env *env)
     fd = open(file, O_RDONLY);
     if (fd != -1)
     {
-        end == 0;
-        while (end == 0)
+        while (get_next_line(fd, &line) > 0)
         {
-            linere = get_next_line(fd, &line);
-            if (linere == -1)
-                break;
-            if (linere == 0)
-                end = 1;
             split = ft_strsplit(line, ' ');
             if(split[0][0] != '#') {
                 if (ft_strcmp(split[0], "v") == 0)
@@ -44,6 +38,7 @@ void count_components(char *file, t_env *env)
             ft_strdel(&line);
             ft_strarrdel(split);
         }
+        close(fd);
     }
 }
 
@@ -124,5 +119,6 @@ void read_obj(char *file, t_env *env)
             ft_strdel(&line);
             ft_strarrdel(split);
         }
+        close(fd);
     }
 }

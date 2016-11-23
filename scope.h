@@ -56,4 +56,11 @@ void init_env(t_env *env);
 void assing_mem(t_env *env);
 void ft_exit(char *msg, int exit_code, t_env *env);
 void  save_materials(split[1], env);
+void tranclation(t_point *apply, t_point move_by);
+t_point point_delta(t_point *p1, t_point p2);
+void negate_point(t_point *p);
+void rotate_x(t_point *apply, t_point center, double angle);
+void rotate_y(t_point *apply, t_point center, double angle);
+void rotate_z(t_point *apply, t_point center, double angle);
+
 #endif //SCOPE_SCOPE_H_H

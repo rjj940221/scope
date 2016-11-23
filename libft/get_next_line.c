@@ -1,122 +1,52 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/11 13:20:06 by tfleming          #+#    #+#             */
-/*   Updated: 2016/06/07 17:28:52 by rojones          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
+int add_buff(char **saveline, int fd){
+    char buff[BUFF_SIZE + 1];
+    char *tmp;
+    int  re;
 
-/*
-** for deal_with_returns, the code was too atrocious with all the
-** (*stock)s, so I just pass it and also the pointer to it.
-*/
-
-/*
-** increase_spill_size:
-** increases the size of spill by at least BUF_SIZE
-** returns non-zero if error
-*/
-
-/*
-** for better performance, replace read line with:
-** read(fd, stocks[fd]->spill + stocks[fd]->lu
-** , stocks[fd]->length - stocks[fd]->lu);
-*/
-
-static int		end_of_line(t_stock *stock)
-{
-	while (stock->lu > stock->line_end - stock->spill
-			&& *(stock->line_end) != '\n')
-		stock->line_end++;
-	if (*(stock->line_end) == '\n')
-		return (stock->lu > stock->line_end - stock->spill);
-	return (0);
+    tmp = *saveline;
+    re = read(fd, buff, BUFF_SIZE - 1);
+    buff[re] = '\0';
+    if (*saveline == NULL)
+        *saveline = ft_strdup(buff);
+    else {
+        tmp = *saveline;
+        *saveline = ft_strjoin(*saveline, buff);
+        ft_strdel(&tmp);
+    }
+    return (re);
 }
 
-static int		increase_spill_size(t_stock *stock)
-{
-	char		*new_spill;
-	long		new_size;
-
-	new_size = stock->length * SPILL_MULT;
-	if (new_size < stock->length + BUFF_SIZE)
-		new_size += BUFF_SIZE;
-	new_spill = malloc((new_size + 1) * sizeof(char));
-	if (!new_spill)
-		return (1);
-	ft_strcpy(new_spill, stock->spill);
-	new_spill[new_size] = '\0';
-	stock->line_end = new_spill + (stock->line_end - stock->spill);
-	free(stock->spill);
-	stock->spill = new_spill;
-	stock->length = new_size;
-	return (0);
+int ft_return(int exitcode, char** del){
+    ft_strdel(del);
+    return(exitcode);
 }
 
-static int		setup(t_stock **stock)
+int get_next_line(const int fd, char **line)
 {
-	*stock = malloc(sizeof(t_stock));
-	if (!*stock)
-		return (1);
-	(*stock)->length = BUFF_SIZE;
-	(*stock)->spill = malloc(((*stock)->length + 1) * sizeof(char));
-	if (!(*stock)->spill)
-		return (1);
-	(*stock)->spill[(*stock)->length] = '\0';
-	(*stock)->lu = 0;
-	(*stock)->line_end = (*stock)->spill;
-	(*stock)->read_ret = 1;
-	return (0);
-}
+    static t_file   files[MAX_FILE_DESC];
+    char            *nline;
+    char            *tmp;
 
-static int		deal_with_returns(t_stock **pointer_to_stock
-									, t_stock *stock, char **line)
-{
-	if (stock->read_ret < 0)
-		return (-1);
-	*line = ft_strsub(stock->spill, 0, stock->line_end - stock->spill);
-	if ((stock->read_ret <= 0 || stock->lu <= 0))
-	{
-		if (stock->spill)
-			free(stock->spill);
-		free(stock);
-		*pointer_to_stock = NULL;
-		return (0);
-	}
-	stock->lu += stock->spill - stock->line_end
-		- (stock->read_ret > 0
-			&& *(stock->line_end) == '\n'
-			&& stock->lu != stock->line_end - stock->spill);
-	ft_memcpy(stock->spill, stock->line_end + 1, stock->lu); 
-	stock->line_end = stock->spill;
-	return (1);
-}
+    if (fd == -1 || fd >= MAX_FILE_DESC)
+        return (-1);
 
-int				get_next_line(int const fd, char **line)
-{
-	static t_stock	*stocks[MAX_FD];
-
-	if (fd >= MAX_FD || fd < 0 || line == NULL)
-		return (-1);
-	if (stocks[fd] && stocks[fd]->read_ret == 0 && stocks[fd]->lu < 0)
-		return (0);
-	if (!stocks[fd] && setup(&stocks[fd]))
-		return (-1);
-	while (stocks[fd]->read_ret > 0 && !((end_of_line(stocks[fd]))))
-	{
-		while (stocks[fd]->lu + BUFF_SIZE > stocks[fd]->length)
-			if (increase_spill_size(stocks[fd]))
-				return (-1);
-		stocks[fd]->read_ret = read(fd, stocks[fd]->spill + stocks[fd]->lu
-									, BUFF_SIZE);
-		stocks[fd]->lu += stocks[fd]->read_ret;
-	}
-	return (deal_with_returns(&stocks[fd], stocks[fd], line));
+    while ((files[fd].sline == NULL) || ((nline = ft_strchr(files[fd].sline, '\n')) == NULL && files[fd].read_re > 0))
+        files[fd].read_re = add_buff(&files[fd].sline, fd);
+    if (files[fd].sline[0] == '\0' && files[fd].read_re == 0)
+        return (ft_return(0, &files[fd].sline));
+    if (files[fd].read_re == -1)
+        return(ft_return(-1, &files[fd].sline));
+    if (nline == NULL)
+    {
+        *line = ft_strdup(files[fd].sline);
+        return (ft_return(1, &files[fd].sline));
+    }
+    *line = ft_strsub(files[fd].sline, 0, (int)(nline - files[fd].sline));
+    tmp = files[fd].sline;
+    files[fd].sline = ft_strsub(files[fd].sline, (int)(nline - files[fd].sline) + 1,
+                                (ft_strlen(files[fd].sline) - ((int)(nline - files[fd].sline) + 1)));
+    ft_strdel(&tmp);
+    return (1);
 }

@@ -1,107 +1,46 @@
-#include <GLUT/glut.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <glew.h>
+#include <glfw3.h>
 
-// all variables initialized to 1.0, meaning
-// the triangle will initially be white
-float red=1.0f, blue=1.0f, green=1.0f;
-
-// angle for rotating triangle
-float angle = 0.0f;
-
-void changeSize(int w, int h) {
-
-    // Prevent a divide by zero, when window is too short
-    // (you cant make a window of zero width).
-    if (h == 0)
-        h = 1;
-    float ratio =  w * 1.0 / h;
-
-    // Use the Projection Matrix
-    glMatrixMode(GL_PROJECTION);
-
-    // Reset Matrix
-    glLoadIdentity();
-
-    // Set the viewport to be the entire window
-    glViewport(0, 0, w, h);
-
-    // Set the correct perspective.
-    gluPerspective(45.0f, ratio, 0.1f, 100.0f);
-
-    // Get Back to the Modelview
-    glMatrixMode(GL_MODELVIEW);
-}
-
-void renderScene(void) {
-
-    // Clear Color and Depth Buffers
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    // Reset transformations
-    glLoadIdentity();
-
-    // Set the camera
-    gluLookAt(	0.0f, 0.0f, 10.0f,
-                  0.0f, 0.0f,  0.0f,
-                  0.0f, 1.0f,  0.0f);
-
-    glRotatef(angle, 0.0f, 1.0f, 0.0f);
-
-    glColor3f(red,green,blue);
-    glBegin(GL_TRIANGLES);
-    glVertex3f(-2.0f,-2.0f, 0.0f);
-    glVertex3f( 2.0f, 0.0f, 0.0);
-    glVertex3f( 0.0f, 2.0f, 0.0);
-    glEnd();
-
-    angle+=0.1f;
-
-    glutSwapBuffers();
-}
-
-void processNormalKeys(unsigned char key, int x, int y) {
-
-    if (key == 27)
-        exit(0);
-}
-
-void processSpecialKeys(int key, int x, int y) {
-
-    switch(key) {
-        case GLUT_KEY_F1 :
-            red = 1.0;
-            green = 0.0;
-            blue = 0.0; break;
-        case GLUT_KEY_F2 :
-            red = 0.0;
-            green = 1.0;
-            blue = 0.0; break;
-        case GLUT_KEY_F3 :
-            red = 0.0;
-            green = 0.0;
-            blue = 1.0; break;
+int main(void)
+{
+    if( !glfwInit() )
+    {
+        fprintf( stderr, "Failed to initialize GLFW\n" );
+        return -1;
     }
-}
+    glfwWindowHint(GLFW_SAMPLES, 4); // 4x antialiasing
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL
 
-int main(int argc, char **argv) {
+// Open a window and create its OpenGL context
+    GLFWwindow* window; // (In the accompanying source code, this variable is global)
+    window = glfwCreateWindow( 1024, 768, "Tutorial 01", NULL, NULL);
+    if( window == NULL ){
+        fprintf( stderr, "Failed to open GLFW window.\n" );
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(window); // Initialize GLEW
+    glewExperimental=1; // Needed in core profile
+    if (glewInit() != GLEW_OK) {
+        fprintf(stderr, "Failed to initialize GLEW\n");
+        return -1;
+    }
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
-    // init GLUT and create window
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-    glutInitWindowPosition(100,100);
-    glutInitWindowSize(320,320);
-    glutCreateWindow("Lighthouse3D- GLUT Tutorial");
+    do{
+        // Draw nothing, see you in tutorial 2 !
 
-    // register callbacks
-    glutDisplayFunc(renderScene);
-    glutReshapeFunc(changeSize);
-    glutIdleFunc(renderScene);
+        // Swap buffers
+        glfwSwapBuffers(window);
+        glfwPollEvents();
 
-    // here are the new entries
-    glutKeyboardFunc(processNormalKeys);
-    glutSpecialFunc(processSpecialKeys);
-
-    // enter GLUT event processing cycle
-    glutMainLoop();
-
-    return 1;
+    } // Check if the ESC key was pressed or the window was closed
+    while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
+           glfwWindowShouldClose(window) == 0 );
 }

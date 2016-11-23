@@ -6,7 +6,7 @@
 #    By: rojones <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/05/11 13:16:09 by rojones           #+#    #+#              #
-#    Updated: 2016/11/22 09:09:31 by rojones          ###   ########.fr        #
+#    Updated: 2016/11/23 10:13:17 by rojones          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = libft.a
@@ -23,11 +23,11 @@ OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o \
 	ft_strjoin.o ft_strtrim.o ft_strsplit.o ft_itoa.o ft_putchar.o \
 	ft_putstr.o ft_putendl.o  ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o \
 	ft_putendl_fd.o ft_putnbr_fd.o ft_strcmp.o ft_strncmp.o ft_lstnew.o \
-   	ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
-	ft_isspace.o get_next_line.o ft_newword.o ft_wordlen.o ft_numwords.o\
+	ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
+	ft_isspace.o ft_newword.o ft_wordlen.o ft_numwords.o\
 	ft_lstaddend.o ft_convert.o ft_modifiers.o ft_nummoders.o ft_pad.o\
 	ft_printf.o ft_printnumber.o ft_printstring.o ft_flags.o ft_printchar.o\
-	ft_atod.o
+	ft_atod.o get_next_line.o
 
 $(NAME): all
 
@@ -222,9 +222,6 @@ ft_lstmap.o : ft_lstmap.c
 ft_isspace.o : ft_isspace.c
 	$(C) $(CFLAGS) ft_isspace.c
 
-get_next_line.o : get_next_line.c
-	$(C) $(CFLAGS) get_next_line.c
-
 ft_newword.o : ft_newword.c
 	$(C) $(CFLAGS) ft_newword.c
 
@@ -263,3 +260,6 @@ ft_printstring.o : ft_printstring.c
 
 ft_printchar.o : ft_printchar.c
 	$(C) $(CFLAGS) ft_printchar.c
+
+get_next_line.o: get_next_line.c
+	$(C) $(CFLAGS) get_next_line.c
