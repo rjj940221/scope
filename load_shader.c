@@ -40,10 +40,11 @@ static GLuint shaderCompileFromFile(GLenum type, const char *filePath)
 
 
     source = shaderLoadSource(filePath);
+    puts(source);
     if(!source)
         return 0;
     shader = glCreateShader(type);
-    length = strlen(source);
+    length = ft_strlen(source);
     glShaderSource(shader, 1, (const char **)&source, &length);
     glCompileShader(shader);
     ft_strdel(&source);
@@ -60,12 +61,11 @@ static GLuint shaderCompileFromFile(GLenum type, const char *filePath)
     return shader;
 }
 
-void shaderAttachFromFile(GLuint program, GLenum type, const char *filePath)
+GLuint shaderAttachFromFile(GLuint program, GLenum type, const char *filePath)
 {
     GLuint shader = shaderCompileFromFile(type, filePath);
     if(shader != 0) {
         glAttachShader(program, shader);
-        glDeleteShader(shader);
     }
 }
 
@@ -73,12 +73,13 @@ GLuint  load_program(char *vertex_shader, char *fragment_shader)
 {
     GLint result;
     GLuint program_id;
+    GLuint shaders[2];
     GLint length;
     char *log;
 
     program_id = glCreateProgram();
-    shaderAttachFromFile(program_id, GL_VERTEX_SHADER, vertex_shader);
-    shaderAttachFromFile(program_id, GL_FRAGMENT_SHADER, fragment_shader);
+    shaders[0] = shaderAttachFromFile(program_id, GL_VERTEX_SHADER, vertex_shader);
+    shaders[1] = shaderAttachFromFile(program_id, GL_FRAGMENT_SHADER, fragment_shader);
     glLinkProgram(program_id);
     glGetProgramiv(program_id, GL_LINK_STATUS, &result);
     if(result == GL_FALSE) {
@@ -90,5 +91,9 @@ GLuint  load_program(char *vertex_shader, char *fragment_shader)
         glDeleteProgram(program_id);
         program_id = 0;
     }
+    glDetachShader(program_id, shaders[0]);
+    glDetachShader(program_id, shaders[1]);
+    glDeleteShader(shaders[0]);
+    glDeleteShader(shaders[1]);
     return (program_id);
 }
