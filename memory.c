@@ -54,3 +54,12 @@ void ft_strarrdel(char **del) {
         del = NULL;
     }
 }
+
+int check_file(char *file)
+{
+    if(access(file, R_OK ) == -1 ) {
+        ft_printf("The file '%s' cannot be read\n", file);
+        return (false);
+    }
+    return (true);
+}
