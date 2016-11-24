@@ -12,17 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d420f82-0614-479f-8562-89111843357f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test2.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vertex.glsl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SimpleFragmentShader.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SimpleVertexShader.glsl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scope" afterPath="$PROJECT_DIR$/scope" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scope.dSYM/Contents/Resources/DWARF/scope" afterPath="$PROJECT_DIR$/scope.dSYM/Contents/Resources/DWARF/scope" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/load_shader.c" afterPath="$PROJECT_DIR$/load_shader.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.c" afterPath="$PROJECT_DIR$/test.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.c" afterPath="$PROJECT_DIR$/test2.c" />
     </list>
     <ignored path="scope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,30 +39,30 @@
     <favorites_list name="scope" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6034836">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="load_shader.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/load_shader.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="41">
-                  <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+                <state relative-caret-position="-255">
+                  <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test2.c" pinned="false" current-in-tab="false">
+          <file leaf-file-name="test2.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test2.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="656">
-                  <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+                <state relative-caret-position="326">
+                  <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="vertex.glsl" pinned="false" current-in-tab="true">
+          <file leaf-file-name="vertex.glsl" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/vertex.glsl">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
@@ -140,11 +134,11 @@
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/SimpleFragmentShader.glsl" />
         <option value="$PROJECT_DIR$/SimpleVertexShader.glsl" />
-        <option value="$PROJECT_DIR$/load_shader.c" />
         <option value="$PROJECT_DIR$/test.c" />
-        <option value="$PROJECT_DIR$/test2.c" />
         <option value="$PROJECT_DIR$/fragment.glsl" />
         <option value="$PROJECT_DIR$/vertex.glsl" />
+        <option value="$PROJECT_DIR$/load_shader.c" />
+        <option value="$PROJECT_DIR$/test2.c" />
       </list>
     </option>
   </component>
@@ -155,8 +149,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="923" />
-    <option name="width" value="997" />
+    <option name="x" value="906" />
+    <option name="width" value="1014" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -425,18 +419,18 @@
       <workItem from="1479963492857" duration="3481000" />
       <workItem from="1479968233216" duration="13211000" />
       <workItem from="1479990771335" duration="6628000" />
-      <workItem from="1479998610329" duration="849000" />
+      <workItem from="1479998610329" duration="2236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64603000" />
+    <option name="totallyTimeSpent" value="65990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="923" y="0" width="997" height="1080" extended-state="0" />
+    <frame x="906" y="0" width="1014" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27971312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27895266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32825205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -671,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/42.obj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="95" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -812,22 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/load_shader.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fragment.glsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -840,6 +811,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/42.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_shader.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
           <folding />
         </state>
       </provider>

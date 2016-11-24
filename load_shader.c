@@ -40,7 +40,6 @@ static GLuint shaderCompileFromFile(GLenum type, const char *filePath)
 
 
     source = shaderLoadSource(filePath);
-    puts(source);
     if(!source)
         return 0;
     shader = glCreateShader(type);
