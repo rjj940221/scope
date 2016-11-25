@@ -1,9 +1,13 @@
-#version 330 core
+#version 330
+// Input vertex data, different for all executions of this shader.
+layout(location = 0) in vec3 vertexPosition;
 
-layout (location = 0) in vec3 position;
+// Values that stay constant for the whole mesh.
+uniform mat4 MVP;
 
-void main()
-{
-    gl_Position = vec4(position.x, position.y, position.z, 1.0);
+void main(){
+  // Output position of the vertex, in clip space : MVP * position
+  gl_Position =  MVP * vec4(vertexPosition,1);
+  //gl_Position = vec4(vertexPosition, 1);
 }
 

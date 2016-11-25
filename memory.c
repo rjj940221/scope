@@ -1,43 +1,41 @@
 #include "scope.h"
 
 void init_env(t_env *env) {
+    t_matrix tmp;
+
+    init_mat_identity(tmp);
     env->num_vertex = 0;
     env->num_materials = 0;
     env->num_faces = 0;
+    init_mat_identity(&env->m);
+    look_at((t_point){4,3,-3,0},(t_point){0,0,0,0},(t_point){0,1,0,0}, &env->v);
+    perspective(&env->p, (t_perspective){60, 800 / 600, 1.0, 100});
+    matrix_matrix(env->m,env->v, &tmp);
+    matrix_matrix(tmp, env->p, &env->mvp);
 }
 
 void assing_mem(t_env *env) {
-    if (!(env->faces = (t_face *) malloc(sizeof(t_face) * env->num_faces)))
+    if (!(env->ogl.indices = (GLuint *) malloc(sizeof(GLuint) * env->num_faces)))
         ft_exit("failed to assigne memory for faces\n", EXIT_FAILURE, env);
-    if (!(env->verticy = (t_face *) malloc(sizeof(t_point) * env->num_vertex)))
+    if (!(env->ogl.vertices = (GLfloat *) malloc(sizeof(GLfloat) * env->num_vertex)))
         ft_exit("failed to assigne memory for verticy\n", EXIT_FAILURE, env);
-    if (!(env->material = (t_face *) malloc(sizeof(t_material) * env->num_materials)))
+    if (!(env->material = (t_material *) malloc(sizeof(t_material) * env->num_materials)))
         ft_exit("failed to asingen memory for materials\n", EXIT_FAILURE, env);
+
+
 }
 
 void ft_exit(char *msg, int exit_code, t_env *env) {
     int i;
 
     ft_putstr(msg);
-    if (env->verticy) {
-        free(env->verticy);
-        env->verticy = NULL;
-    }
-    if (env->faces) {
-        i = -1;
-        while (++i < env->num_faces) {
-            /*if (env->faces[i]) {
-                free(env->faces[i]);
-                env->faces[i] = NULL;
-            }*/
-        }
-        free(env->faces);
-        env->faces = NULL;
-    }
-    if (env->material) {
-        free(env->material);
-        env->material = NULL;
-    }
+    if (env->ogl.vertices)
+        ft_memdel(&env->ogl.vertices);
+    if (env->ogl.indices)
+        ft_memdel(&env->ogl.indices);
+    if (env->material)
+        ft_memdel(&env->material);
+    glfwTerminate();
     exit(exit_code);
 }
 

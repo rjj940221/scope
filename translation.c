@@ -11,7 +11,7 @@ void tranclation(t_point *apply, t_point move_by)
     apply->z = move_by.z + apply->z;
 }
 
-t_point point_delta(t_point *p1, t_point p2)
+t_point point_delta(t_point *p1, t_point *p2)
 {
     t_point re;
 

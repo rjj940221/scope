@@ -73,7 +73,11 @@ int main()
     {
         glClear(GL_COLOR_BUFFER_BIT);
         glfwPollEvents();
+        GLfloat timeValue = glfwGetTime();
+        GLfloat greenValue = (sin(timeValue) / 2) + 0.5;
+        GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
         glUseProgram(shaderProgram);
+        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
         glBindVertexArray(VAO);
         //glDrawArrays(GL_TRIANGLES, 0, 3);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT,0);

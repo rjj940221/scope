@@ -16,9 +16,8 @@ t_point matrix_vector(t_matrix mat , t_point p)
     return (re);
 }
 
-t_matrix *matrix_matrix(t_matrix m1, t_matrix m2)
+void matrix_matrix(t_matrix m1, t_matrix m2, t_matrix *dest)
 {
-    t_matrix re;
     int i;
     int j;
 
@@ -28,10 +27,9 @@ t_matrix *matrix_matrix(t_matrix m1, t_matrix m2)
         j = -1;
         while (++j < 4)
         {
-            re[i][j] = (m1[i][0] * m2 [0][j]) + (m1[i][1] * m2 [1][j]) + (m1[i][2] * m2 [2][j]) + (m1[i][3] * m2 [3][j]);
+            (*dest)[i][j] = (m1[i][0] * m2 [0][j]) + (m1[i][1] * m2 [1][j]) + (m1[i][2] * m2 [2][j]) + (m1[i][3] * m2 [3][j]);
         }
     }
-    return re;
 }
 
 t_matrix *rotat_x(double angle)
