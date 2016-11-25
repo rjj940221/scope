@@ -22,7 +22,7 @@
 # include <stdarg.h>
 # include <inttypes.h>
 # include <stdlib.h>
-# include <libc.h>
+
 # define L_LEN 50
 # define SPILL_MULT	2
 # define BUFF_SIZE 32

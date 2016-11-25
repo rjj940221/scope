@@ -28,8 +28,6 @@ void count_components(char *file, t_env *env)
     int fd;
     char *line;
     char **split;
-    int  end;
-    int  linere;
 
     fd = open(file, O_RDONLY);
     if (fd != -1)

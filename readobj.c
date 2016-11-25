@@ -5,7 +5,7 @@
 #include "scope.h"
 
 void    save_vert(t_env *env, char **split){
-    static int  vcount;
+    static unsigned int  vcount;
     int i;
 
     if (vcount < env->num_vertex) {
@@ -22,8 +22,7 @@ void    save_vert(t_env *env, char **split){
 void    save_face(t_env *env, char **split)
 {
     int                 i;
-    int                 offset;
-    static  int face_count;
+    static unsigned int face_count;
 
     if (face_count < env->num_faces)
     {

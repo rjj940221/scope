@@ -33,19 +33,6 @@ void init_ogl(t_env *env)
 
 void bind_buffers(t_env *env)
 {
-    printf ("num faces %d \n", env->num_faces);
-    for (int i = 0; i < env->num_faces; i++)
-    {
-        printf("%d  ", env->ogl.indices[i]);
-    }
-    puts("");
-    printf ("num vertecy %d \n", env->num_vertex);
-    for (int i = 0; i < env->num_vertex; i++)
-    {
-        printf("%f  ", env->ogl.vertices[i]);
-    }
-    puts("");
-
     glGenVertexArrays(1, &env->ogl.VAO);
     glGenBuffers(1, &env->ogl.VBO);
     glGenBuffers(1, &env->ogl.EBO);

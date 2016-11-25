@@ -7,13 +7,15 @@
 
 #include "libft/libft.h"
 #include <unistd.h>
-#include <libc.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <glew.h>
 #include <glfw3.h>
 #include <assert.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #define true 1
 #define false 0
 
@@ -85,7 +87,7 @@ void        count_materials(char *file, t_env *env);
 void        init_env(t_env *env);
 void        assing_mem(t_env *env);
 void        ft_exit(char *msg, int exit_code, t_env *env);
-void        save_materials(split[1], env);
+void        save_materials(char *filename, t_env *env);
 void        tranclation(t_point *apply, t_point move_by);
 t_point     point_delta(t_point *p1, t_point *p2);
 void        negate_point(t_point *p);
@@ -108,5 +110,8 @@ void        perspective(t_matrix *dest, t_perspective perspective);
 void        look_at(t_point pos, t_point look, t_point up, t_matrix *dest);
 void        matrix_matrix(t_matrix m1, t_matrix m2, t_matrix *dest);
 void        init_mat_identity(t_matrix *mat);
+void        init_matrix(t_matrix *mat);
+void        ft_strarrdel(char **del);
+
 
 #endif //SCOPE_SCOPE_H_H

@@ -3,7 +3,7 @@
 void init_env(t_env *env) {
     t_matrix tmp;
 
-    init_mat_identity(tmp);
+    init_mat_identity(&tmp);
     env->num_vertex = 0;
     env->num_materials = 0;
     env->num_faces = 0;
@@ -21,20 +21,16 @@ void assing_mem(t_env *env) {
         ft_exit("failed to assigne memory for verticy\n", EXIT_FAILURE, env);
     if (!(env->material = (t_material *) malloc(sizeof(t_material) * env->num_materials)))
         ft_exit("failed to asingen memory for materials\n", EXIT_FAILURE, env);
-
-
 }
 
 void ft_exit(char *msg, int exit_code, t_env *env) {
-    int i;
-
     ft_putstr(msg);
     if (env->ogl.vertices)
-        ft_memdel(&env->ogl.vertices);
+        ft_memdel((void **)&env->ogl.vertices);
     if (env->ogl.indices)
-        ft_memdel(&env->ogl.indices);
+        ft_memdel((void **)&env->ogl.indices);
     if (env->material)
-        ft_memdel(&env->material);
+        ft_memdel((void **)&env->material);
     glfwTerminate();
     exit(exit_code);
 }

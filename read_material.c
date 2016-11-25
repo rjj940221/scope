@@ -17,7 +17,7 @@ void count_materials(char *file, t_env *env){
     }
 }
 
-void  save_materials(split[1], env){
-
+void  save_materials(char *file, t_env *env){
+   printf("saving flie %s for material %d\n", file, env->num_materials);
 }
 

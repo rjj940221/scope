@@ -32,56 +32,54 @@ void matrix_matrix(t_matrix m1, t_matrix m2, t_matrix *dest)
     }
 }
 
-t_matrix *rotat_x(double angle)
+void rotat_x(float angle, t_matrix *dest)
 {
-    double sinv;
-    double cosv;
-    t_matrix re;
-
+    float sinv;
+    float cosv;
+   
     angle = angle * (M_PI / 180);
     sinv = sin(angle);
     cosv = cos(angle);
-    re[0][0] = 1;
-    re[1][1] = cosv;
-    re[2][1] = (-sinv);
-    re[1][2] = sinv;
-    re[2][2] = cosv;
-    re[3][3] = 1;
-    return re;
+    init_matrix(dest);
+    (*dest)[0][0] = 1;
+    (*dest)[1][1] = cosv;
+    (*dest)[2][1] = (-sinv);
+    (*dest)[1][2] = sinv;
+    (*dest)[2][2] = cosv;
+    (*dest)[3][3] = 1;
+  
 }
 
-t_matrix *rotat_y(double angle)
+void rotat_y(float angle, t_matrix *dest)
 {
-    double sinv;
-    double cosv;
-    t_matrix re;
-
+    float sinv;
+    float cosv;
+   
     angle = angle * (M_PI / 180);
     sinv = sin(angle);
     cosv = cos(angle);
-    re[0][0] = cosv;
-    re[2][0] = sinv;
-    re[1][1] = 1;
-    re[0][2] = (-sinv);
-    re[2][2] = cosv;
-    re[3][3] = 1;
-    return re;
+    init_matrix(dest);
+    (*dest)[0][0] = cosv;
+    (*dest)[2][0] = sinv;
+    (*dest)[1][1] = 1;
+    (*dest)[0][2] = (-sinv);
+    (*dest)[2][2] = cosv;
+    (*dest)[3][3] = 1;
 }
 
-t_matrix *rotat_z(double angle)
+void rotat_z(float angle, t_matrix *dest)
 {
-    double sinv;
-    double cosv;
-    t_matrix re;
+    float sinv;
+    float cosv;
 
     angle = angle * (M_PI / 180);
     sinv = sin(angle);
     cosv = cos(angle);
-    re[0][0] = cosv;
-    re[1][0] = -sinv;
-    re[0][1] = sinv;
-    re[1][1] = cosv;
-    re[2][2] = 1;
-    re[3][3] = 1;
-    return re;
+    init_matrix (dest);
+    (*dest)[0][0] = cosv;
+    (*dest)[1][0] = -sinv;
+    (*dest)[0][1] = sinv;
+    (*dest)[1][1] = cosv;
+    (*dest)[2][2] = 1;
+    (*dest)[3][3] = 1;
 }
