@@ -66,7 +66,7 @@ int main()
     shaderProgram = load_program("vertex.glsl", "fragment.glsl");
 
     glfwSetKeyCallback(window, key_callback);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
     while(!glfwWindowShouldClose(window))
