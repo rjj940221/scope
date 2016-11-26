@@ -6,7 +6,7 @@
 /*   By: rojones <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 14:43:24 by rojones           #+#    #+#             */
-/*   Updated: 2016/11/26 15:21:58 by rojones          ###   ########.fr       */
+/*   Updated: 2016/11/26 18:43:58 by rojones          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,25 +43,25 @@ void	assing_mem(t_env *env)
 			ft_exit("failed to assigne memory for faces\n", EXIT_FAILURE, env);
 		if (!(env->obj[ocount].vertices = (GLfloat *)
 				malloc(sizeof(GLfloat) * env->obj[ocount].num_vertex)))
-			ft_exit("failed to assigne memory for verticy\n", EXIT_FAILURE, env);
+			ft_exit("fail to assigne memory for verticy\n", EXIT_FAILURE, env);
 	}
 }
 
 void	ft_exit(char *msg, int exit_code, t_env *env)
 {
-   int ocount;
+	int ocount;
 
 	ft_putstr(msg);
-    ocount = -1;
-    while (++ocount < env->num_obj)
-    {
-        if (env->obj[ocount].vertices)
-            ft_memdel((void **) &env->obj[ocount].vertices);
-        if (env->obj[ocount].indices)
-            ft_memdel((void **) &env->obj[ocount].indices);
-    }
-    if (env->obj)
-        ft_memdel((void **)&env->obj);
+	ocount = -1;
+	while (++ocount < env->num_obj)
+	{
+		if (env->obj[ocount].vertices)
+			ft_memdel((void **)&env->obj[ocount].vertices);
+		if (env->obj[ocount].indices)
+			ft_memdel((void **)&env->obj[ocount].indices);
+	}
+	if (env->obj)
+		ft_memdel((void **)&env->obj);
 	if (env->material)
 		ft_memdel((void **)&env->material);
 	glfwTerminate();

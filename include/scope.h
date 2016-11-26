@@ -6,7 +6,7 @@
 /*   By: rojones <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:17:17 by rojones           #+#    #+#             */
-/*   Updated: 2016/11/26 15:27:39 by rojones          ###   ########.fr       */
+/*   Updated: 2016/11/26 18:49:25 by rojones          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,14 @@ typedef struct	s_obj
 {
 	unsigned int	num_vertex;
 	unsigned int	num_faces;
-	GLfloat		*vertices;
-	GLuint		*indices;
-	GLuint		vbo;
-	GLuint		vao;
-	GLuint		ebo;
-    t_point     max;
-    t_point     min;
-    t_point     mid;
+	GLfloat			*vertices;
+	GLuint			*indices;
+	GLuint			vbo;
+	GLuint			vao;
+	GLuint			ebo;
+	t_point			max;
+	t_point			min;
+	t_point			mid;
 }				t_obj;
 
 typedef struct	s_open_gl
@@ -82,12 +82,12 @@ typedef struct	s_open_gl
 	GLFWwindow	*window;
 	GLuint		shader_program;
 	GLuint		matrix_pass;
-    GLuint      center_pass;
+	GLuint		center_pass;
 }				t_open_gl;
 
 typedef struct	s_env
 {
-	int	num_obj;
+	int				num_obj;
 	unsigned int	num_materials;
 	t_obj			*obj;
 	t_open_gl		ogl;
@@ -121,7 +121,7 @@ void			init_ogl(t_env *env);
 void			loop_ogl(t_env *env);
 void			bind_buffers(t_env *env);
 void			key_callback(GLFWwindow *window, int key, int scancode,
-					int action, int mode);
+		int action, int mode);
 float			dot_product(t_point *p1, t_point *p2);
 t_point			cross_product(t_point *p1, t_point *p2);
 t_point			normalize(t_point p);
@@ -141,6 +141,6 @@ void			move_keys(t_env *env);
 void			rot_keys(t_env *env);
 void			test_key(t_env *env);
 void			keys(t_env *env);
-void            init_obj(t_obj *obj);
+void			init_obj(t_obj *obj);
 
 #endif

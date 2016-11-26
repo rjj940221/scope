@@ -6,7 +6,7 @@
 /*   By: rojones <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 14:53:33 by rojones           #+#    #+#             */
-/*   Updated: 2016/11/26 15:23:47 by rojones          ###   ########.fr       */
+/*   Updated: 2016/11/26 18:45:30 by rojones          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,19 +52,19 @@ void	bind_buffers(t_env *env)
 		glBindVertexArray(env->obj[ocount].vao);
 		glBindBuffer(GL_ARRAY_BUFFER, env->obj[ocount].vbo);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * env->obj[ocount].
-                num_vertex, env->obj[ocount].vertices, GL_STATIC_DRAW);
+				num_vertex, env->obj[ocount].vertices, GL_STATIC_DRAW);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, env->obj[ocount].ebo);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLint) * env->obj[ocount].
-                num_faces, env->obj[ocount].indices, GL_STATIC_DRAW);
+				num_faces, env->obj[ocount].indices, GL_STATIC_DRAW);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_TRUE,
-							  4 * sizeof(GLfloat), (GLvoid *) 0);
+				4 * sizeof(GLfloat), (GLvoid *)0);
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		glBindVertexArray(0);
 	}
 	env->ogl.shader_program = load_program("vertex.glsl", "fragment.glsl");
 	env->ogl.matrix_pass = glGetUniformLocation(env->ogl.shader_program, "MVP");
-    env->ogl.center_pass = glGetUniformLocation(env->ogl.shader_program, "CNT");
+	env->ogl.center_pass = glGetUniformLocation(env->ogl.shader_program, "CNT");
 }
 
 void	loop_ogl(t_env *env)
@@ -72,7 +72,7 @@ void	loop_ogl(t_env *env)
 	int ocount;
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    	while (!glfwWindowShouldClose(env->ogl.window))
+	while (!glfwWindowShouldClose(env->ogl.window))
 	{
 		ocount = -1;
 		keys(env);
@@ -81,9 +81,10 @@ void	loop_ogl(t_env *env)
 		glUniformMatrix4fv(env->ogl.matrix_pass, 1, GL_FALSE, &env->mvp[0][0]);
 		while (++ocount < env->num_obj)
 		{
-            glUseProgram(env->ogl.shader_program);
+			glUseProgram(env->ogl.shader_program);
 			glBindVertexArray(env->obj[ocount].vao);
-			glDrawElements(GL_TRIANGLES, env->obj[ocount].num_faces, GL_UNSIGNED_INT, 0);
+			glDrawElements(GL_TRIANGLES, env->obj[ocount].num_faces,
+					GL_UNSIGNED_INT, 0);
 			glBindVertexArray(0);
 		}
 		glfwSwapBuffers(env->ogl.window);
