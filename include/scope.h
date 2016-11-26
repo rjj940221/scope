@@ -63,23 +63,33 @@ typedef struct	s_material
 	int		illum;
 }				t_material;
 
-typedef struct	s_open_gl
+typedef struct	s_obj
 {
-	GLFWwindow	*window;
+	unsigned int	num_vertex;
+	unsigned int	num_faces;
+	GLfloat		*vertices;
+	GLuint		*indices;
 	GLuint		vbo;
 	GLuint		vao;
 	GLuint		ebo;
+    t_point     max;
+    t_point     min;
+    t_point     mid;
+}				t_obj;
+
+typedef struct	s_open_gl
+{
+	GLFWwindow	*window;
 	GLuint		shader_program;
-	GLfloat		*vertices;
-	GLuint		*indices;
 	GLuint		matrix_pass;
+    GLuint      center_pass;
 }				t_open_gl;
 
 typedef struct	s_env
 {
-	unsigned int	num_vertex;
-	unsigned int	num_faces;
+	int	num_obj;
 	unsigned int	num_materials;
+	t_obj			*obj;
 	t_open_gl		ogl;
 	t_material		*material;
 	t_matrix		mvp;
@@ -131,5 +141,6 @@ void			move_keys(t_env *env);
 void			rot_keys(t_env *env);
 void			test_key(t_env *env);
 void			keys(t_env *env);
+void            init_obj(t_obj *obj);
 
 #endif

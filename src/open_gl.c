@@ -41,38 +41,51 @@ void	init_ogl(t_env *env)
 
 void	bind_buffers(t_env *env)
 {
-	glGenVertexArrays(1, &env->ogl.vao);
-	glGenBuffers(1, &env->ogl.vbo);
-	glGenBuffers(1, &env->ogl.ebo);
-	glBindVertexArray(env->ogl.vao);
-	glBindBuffer(GL_ARRAY_BUFFER, env->ogl.vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) *
-			env->num_vertex, env->ogl.vertices, GL_STATIC_DRAW);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, env->ogl.ebo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLint) *
-			env->num_faces, env->ogl.indices, GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_TRUE,
-			4 * sizeof(GLfloat), (GLvoid*)0);
-	glEnableVertexAttribArray(0);
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
+	int ocount;
+
+	ocount = -1;
+	while (++ocount < env->num_obj)
+	{
+		glGenVertexArrays(1, &env->obj[ocount].vao);
+		glGenBuffers(1, &env->obj[ocount].vbo);
+		glGenBuffers(1, &env->obj[ocount].ebo);
+		glBindVertexArray(env->obj[ocount].vao);
+		glBindBuffer(GL_ARRAY_BUFFER, env->obj[ocount].vbo);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * env->obj[ocount].
+                num_vertex, env->obj[ocount].vertices, GL_STATIC_DRAW);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, env->obj[ocount].ebo);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLint) * env->obj[ocount].
+                num_faces, env->obj[ocount].indices, GL_STATIC_DRAW);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_TRUE,
+							  4 * sizeof(GLfloat), (GLvoid *) 0);
+		glEnableVertexAttribArray(0);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glBindVertexArray(0);
+	}
 	env->ogl.shader_program = load_program("vertex.glsl", "fragment.glsl");
 	env->ogl.matrix_pass = glGetUniformLocation(env->ogl.shader_program, "MVP");
+    env->ogl.center_pass = glGetUniformLocation(env->ogl.shader_program, "CNT");
 }
 
 void	loop_ogl(t_env *env)
 {
+	int ocount;
+
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	while (!glfwWindowShouldClose(env->ogl.window))
+    	while (!glfwWindowShouldClose(env->ogl.window))
 	{
+		ocount = -1;
 		keys(env);
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glUniformMatrix4fv(env->ogl.matrix_pass, 1, GL_FALSE, &env->mvp[0][0]);
-		glUseProgram(env->ogl.shader_program);
-		glBindVertexArray(env->ogl.vao);
-		glDrawElements(GL_TRIANGLES, env->num_faces, GL_UNSIGNED_INT, 0);
-		glBindVertexArray(0);
+		while (++ocount < env->num_obj)
+		{
+            glUseProgram(env->ogl.shader_program);
+			glBindVertexArray(env->obj[ocount].vao);
+			glDrawElements(GL_TRIANGLES, env->obj[ocount].num_faces, GL_UNSIGNED_INT, 0);
+			glBindVertexArray(0);
+		}
 		glfwSwapBuffers(env->ogl.window);
 		glfwPollEvents();
 	}

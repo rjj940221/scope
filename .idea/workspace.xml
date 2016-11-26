@@ -12,7 +12,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d420f82-0614-479f-8562-89111843357f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/open_gl.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scope" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/keys.o" afterPath="$PROJECT_DIR$/build/keys.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main.o" afterPath="$PROJECT_DIR$/build/main.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/memory.o" afterPath="$PROJECT_DIR$/build/memory.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/obj_info.o" afterPath="$PROJECT_DIR$/build/obj_info.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/read_material.o" afterPath="$PROJECT_DIR$/build/read_material.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/readobj.o" afterPath="$PROJECT_DIR$/build/readobj.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_convert.o" afterPath="$PROJECT_DIR$/libft/ft_convert.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_flags.o" afterPath="$PROJECT_DIR$/libft/ft_flags.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstadd.o" afterPath="$PROJECT_DIR$/libft/ft_lstadd.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstaddend.o" afterPath="$PROJECT_DIR$/libft/ft_lstaddend.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdel.o" afterPath="$PROJECT_DIR$/libft/ft_lstdel.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdelone.o" afterPath="$PROJECT_DIR$/libft/ft_lstdelone.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstiter.o" afterPath="$PROJECT_DIR$/libft/ft_lstiter.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstmap.o" afterPath="$PROJECT_DIR$/libft/ft_lstmap.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstnew.o" afterPath="$PROJECT_DIR$/libft/ft_lstnew.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_modifiers.o" afterPath="$PROJECT_DIR$/libft/ft_modifiers.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_nummoders.o" afterPath="$PROJECT_DIR$/libft/ft_nummoders.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_pad.o" afterPath="$PROJECT_DIR$/libft/ft_pad.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_printchar.o" afterPath="$PROJECT_DIR$/libft/ft_printchar.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_printnumber.o" afterPath="$PROJECT_DIR$/libft/ft_printnumber.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_printstring.o" afterPath="$PROJECT_DIR$/libft/ft_printstring.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/libft.a" afterPath="$PROJECT_DIR$/libft/libft.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scop" afterPath="$PROJECT_DIR$/scop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/scope.h" afterPath="$PROJECT_DIR$/include/scope.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/memory.c" afterPath="$PROJECT_DIR$/src/memory.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/obj_info.c" afterPath="$PROJECT_DIR$/src/obj_info.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/open_gl.c" afterPath="$PROJECT_DIR$/src/open_gl.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/readobj.c" afterPath="$PROJECT_DIR$/src/readobj.c" />
     </list>
     <ignored path="scope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,18 +65,84 @@
     <favorites_list name="scope" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="load_shader.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/load_shader.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.47933885">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="open_gl.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/open_gl.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="687">
+                  <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="plane_cub.obj" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/plane_cub.obj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="obj_info.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/obj_info.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="732">
+                  <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="readobj.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/readobj.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="708">
+                  <caret line="116" column="39" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="memory.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/memory.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+                  <folding>
+                    <marker date="1480175727221" expanded="false" signature="2506:2632" ph="{...}" />
+                    <marker date="1480175727221" expanded="false" signature="2662:2789" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="scope.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/include/scope.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="612">
+                  <caret line="84" column="27" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#1217#1275#0" expanded="false" />
+                    <element signature="e#1328#1375#0" expanded="false" />
+                    <element signature="e#1396#1471#0" expanded="false" />
+                    <element signature="e#1499#1629#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -96,8 +192,13 @@
         <option value="$PROJECT_DIR$/keys.c" />
         <option value="$PROJECT_DIR$/vertex.glsl" />
         <option value="$PROJECT_DIR$/readobj.c" />
-        <option value="$PROJECT_DIR$/src/readobj.c" />
         <option value="$PROJECT_DIR$/src/load_shader.c" />
+        <option value="$PROJECT_DIR$/src/memory2.c" />
+        <option value="$PROJECT_DIR$/src/obj_info.c" />
+        <option value="$PROJECT_DIR$/src/memory.c" />
+        <option value="$PROJECT_DIR$/src/readobj.c" />
+        <option value="$PROJECT_DIR$/src/open_gl.c" />
+        <option value="$PROJECT_DIR$/include/scope.h" />
       </list>
     </option>
   </component>
@@ -108,8 +209,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="802" />
-    <option name="width" value="1118" />
+    <option name="x" value="477" />
+    <option name="width" value="1443" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -186,6 +287,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scope" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scope" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -193,7 +322,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../get_next_line" />
   </component>
@@ -400,18 +529,18 @@
       <workItem from="1479998610329" duration="2307000" />
       <workItem from="1480051652958" duration="313000" />
       <workItem from="1480052852331" duration="26363000" />
-      <workItem from="1480141687326" duration="14946000" />
+      <workItem from="1480141687326" duration="22847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107683000" />
+    <option name="totallyTimeSpent" value="115584000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="802" y="0" width="1118" height="1080" extended-state="0" />
+    <frame x="477" y="0" width="1443" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2497721" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19268636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29284903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -467,21 +596,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/readobj.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/memory.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.obj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -555,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/teapot2.obj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/libft/ft_strdel.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -574,13 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/teapot2.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -709,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/obj_info.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.obj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -729,14 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/open_gl.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -780,22 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/scope.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/readobj.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vertex.glsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -812,19 +880,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/memory.c">
+    <entry file="file://$PROJECT_DIR$/src/load_shader.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="315">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#923#1362#0" expanded="false" />
+            <element signature="e#1364#2068#0" expanded="false" />
+            <element signature="e#2070#2285#0" expanded="false" />
+            <element signature="e#2287#2617#0" expanded="false" />
+            <element signature="e#2619#3268#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/teapot2.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/load_shader.c">
+    <entry file="file://$PROJECT_DIR$/src/memory2.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/teapot2.mtl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/memory.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <marker date="1480175727221" expanded="false" signature="2506:2632" ph="{...}" />
+            <marker date="1480175727221" expanded="false" signature="2662:2789" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plane_cub.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/obj_info.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readobj.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="116" column="39" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/open_gl.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/scope.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="84" column="27" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+          <folding>
+            <element signature="e#1217#1275#0" expanded="false" />
+            <element signature="e#1328#1375#0" expanded="false" />
+            <element signature="e#1396#1471#0" expanded="false" />
+            <element signature="e#1499#1629#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
