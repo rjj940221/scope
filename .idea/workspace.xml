@@ -12,32 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d420f82-0614-479f-8562-89111843357f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/keys.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matrix3.c" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keys.c" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/load_shader.c" afterPath="$PROJECT_DIR$/src/load_shader.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/src/main.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/matrix1.c" afterPath="$PROJECT_DIR$/src/matrix1.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/matrix2.c" afterPath="$PROJECT_DIR$/src/matrix2.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/memory.c" afterPath="$PROJECT_DIR$/src/memory.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/obj_info.c" afterPath="$PROJECT_DIR$/src/obj_info.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/open_gl.c" afterPath="$PROJECT_DIR$/src/open_gl.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/read_material.c" afterPath="$PROJECT_DIR$/src/read_material.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/readobj.c" afterPath="$PROJECT_DIR$/src/readobj.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/teapot.obj" afterPath="$PROJECT_DIR$/teapot.obj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rotation.c" afterPath="$PROJECT_DIR$/src/rotation.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scope.h" afterPath="$PROJECT_DIR$/include/scope.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/translation.c" afterPath="$PROJECT_DIR$/src/translation.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vector.c" afterPath="$PROJECT_DIR$/src/vector.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/libft.a" afterPath="$PROJECT_DIR$/libft/libft.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scope.dSYM/Contents/Resources/DWARF/scope" afterPath="$PROJECT_DIR$/scope.dSYM/Contents/Resources/DWARF/scope" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fragment.glsl" afterPath="$PROJECT_DIR$/fragment.glsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.c" afterPath="$PROJECT_DIR$/test.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.obj" afterPath="$PROJECT_DIR$/test.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.c" afterPath="$PROJECT_DIR$/test2.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test3.c" afterPath="$PROJECT_DIR$/test3.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vertex.glsl" afterPath="$PROJECT_DIR$/vertex.glsl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -425,12 +400,12 @@
       <workItem from="1479998610329" duration="2307000" />
       <workItem from="1480051652958" duration="313000" />
       <workItem from="1480052852331" duration="26363000" />
-      <workItem from="1480141687326" duration="14839000" />
+      <workItem from="1480141687326" duration="14946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107576000" />
+    <option name="totallyTimeSpent" value="107683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="802" y="0" width="1118" height="1080" extended-state="0" />
@@ -487,18 +462,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/test.c</url>
-          <line>47</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/test3.c</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
@@ -812,7 +775,7 @@
         <state relative-caret-position="714">
           <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding>
-            <marker date="1480161669734" expanded="true" signature="0:1" ph="//..." />
+            <marker date="1480167206202" expanded="true" signature="0:1" ph="//..." />
           </folding>
         </state>
       </provider>
